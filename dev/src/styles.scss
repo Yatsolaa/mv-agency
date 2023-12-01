@@ -64,8 +64,15 @@ $primary-font: "GT Eesti Pro Text";
         margin: 55px 0 0;
     }
 
-    &--max-width{
-        max-width: 230px;
+    &--width{
+
+        &--small{
+            max-width: 230px;
+        }
+        
+        &--large{
+            max-width: 415px;
+        }
     }
 
     &--desktop{
@@ -204,5 +211,100 @@ $primary-font: "GT Eesti Pro Text";
                 fill:#2459FF;
             }
         }
+    }
+}
+
+.text-with-image{
+    position: relative;
+    background-color: #000;
+    padding: 60px 0 55px;
+    
+    @media screen and (min-width:768px) {
+        padding: 15% 0 16%;
+    }
+
+    &__subtitle{
+        color: #888;
+        font-family: $primary-font;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 350;
+        line-height: 160%;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        
+        @media screen and (min-width:768px) {
+            font-size: 12px;
+            letter-spacing: 2.1px;
+        }
+    }
+
+    &__title{
+        margin: 5px 0 0;
+        color: #FFF;
+        font-family: $primary-font;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+
+        @media screen and (min-width:768px) {
+            font-size: 54px;
+        }
+    }
+
+    &__text{
+        margin: 25px 0 0;
+        color: #FFF;
+        font-family: $primary-font;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 350;
+        line-height: 28px; /* 164.706% */
+
+        @media screen and (min-width:768px) {
+            font-size: 18px;
+        }
+    }
+
+    &__content-wrapper{
+        max-width: 530px;
+
+        @media screen and (min-width:768px) and (max-width:1400px) {
+            max-width: 47%;
+        }
+
+        @media screen and (min-width:1400px) {
+            max-width: 43%;
+        }
+    }
+
+    &__image{
+        margin: 30px 0 0;
+        padding: 0 0 0 15px;
+        width: 100%;
+        
+        @media screen and (min-width:768px) {
+            margin: 0;
+            padding: 0;
+
+            position: absolute;
+            width: 50%;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        & > img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__mobile-button-wrapper{
+        display: flex;
+        justify-content: center;
     }
 }
