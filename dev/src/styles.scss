@@ -6,6 +6,15 @@ $primary-font: "GT Eesti Pro Text";
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+main{
+    position: relative;
+    z-index: 1;
+}
+
 .animated-background{
     position: relative;
     height: 100vh;
@@ -28,6 +37,10 @@ $primary-font: "GT Eesti Pro Text";
     padding: 0 15px;
     margin: 0 auto;
     position: relative;
+
+    &--small{
+        max-width: 1000px;
+    }
 }
 
 .image-wrapper{
@@ -306,5 +319,161 @@ $primary-font: "GT Eesti Pro Text";
     &__mobile-button-wrapper{
         display: flex;
         justify-content: center;
+    }
+}
+
+.footer{
+    position: sticky;
+    bottom: 0;
+
+    background-color: #000;
+
+    padding: 80px 0 30px;
+
+    @media screen and (min-width:768px) {
+        padding: 160px 0 40px;
+    }
+
+    &__logo{
+        margin: 0 auto;
+        max-width: 150px;
+
+        @media screen and (min-width:768px) {
+            margin: 0;
+        }
+
+        & > img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__menus-wrapper{
+        @media screen and (min-width:768px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+    }
+
+    &__menu-left{
+
+        & > p{
+            margin: 50px auto 0;
+            color: #A6A6A6;
+            text-align: center;
+            font-family: $primary-font;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 350;
+            line-height: 28px; /* 200% */
+            max-width: 80%;
+
+            @media screen and (min-width:768px) {
+                font-size: 18px;
+                margin: 30px 0 0;
+                text-align: left;
+            }
+        }
+
+        & > ul{
+            list-style: none;
+            margin: 50px 0 0;
+            padding: 0;
+        }
+
+        & li{
+
+            & > a{
+                padding: 6px 0;
+                display: block;
+                color: #FFF;
+                text-align: center;
+                font-family: $primary-font;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 350;
+                line-height: normal;
+                text-decoration: none;
+
+                @media screen and (min-width:768px) {
+                    width: fit-content;
+                    font-size: 18px;
+                    text-align: left;
+                }
+            }
+
+            &:first-child{
+                margin: 0;
+            }
+        }
+    }
+
+    &__contacts{
+        margin: 50px auto 0;
+        width: fit-content;
+        list-style: none;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 6px;
+
+        @media screen and (min-width:768px) {
+            margin: 0;
+            row-gap: 12px;
+        }
+
+        & li a{
+            display: flex;
+            align-items: center;
+            column-gap:10px;
+
+            color: #FFF;
+            font-family: $primary-font;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 350;
+            line-height: normal;
+            text-decoration: none;
+
+            @media screen and (min-width:768px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__social-icons{
+        margin: 50px auto 0;
+        max-width: 220px;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+
+        @media screen and (min-width:768px) {
+            margin: 40px 0 0;
+        }
+
+        & li a{
+            display: block;
+            padding: 5px;
+        }
+    }
+
+    &__rights{
+        margin: 100px 0 0;
+        color: #FFF;
+        text-align: center;
+        font-family: $primary-font;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 350;
+        line-height: normal;
+        letter-spacing: -0.205px;
+        opacity: 0.5;
+
+        @media screen and (min-width: 768px) {
+            font-size: 14px;
+        }
     }
 }
