@@ -32,3 +32,31 @@ window.addEventListener('scroll', function () {
         animatedTextRight.style.transform = 'translateX(' + relativeScroll + 'px)';
     }
 });
+
+document.querySelectorAll('.js-contact-us').forEach(item => {
+    item.addEventListener('click', () => {
+        document.querySelector('.popup').classList.add('is-active');
+        document.querySelector('.overlay').classList.add('is-active');
+        document.querySelector('body').style.overflow = 'hidden';
+    })
+})
+
+document.querySelector('.overlay').addEventListener('click', () => {
+    document.querySelector('.popup').classList.remove('is-active');
+    document.querySelector('.overlay').classList.remove('is-active');
+    document.querySelector('body').style.overflow = 'auto';
+});
+
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    sendEmail();
+});
+
+function sendEmail() {
+    const recipient = document.getElementById('email').value;
+    const subject = document.getElementById('name').value;
+
+    const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}`;
+
+    window.location.href = mailtoLink;
+}
