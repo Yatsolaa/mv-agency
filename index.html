@@ -8,6 +8,16 @@
 
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="assets/fonts.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("SbHPQBb_ahBcc2og0");
+    })();
+    </script>
+
+    <!-- Include the language scripts -->
+    <script type="application/json" id="en-language" src="./locales/en.json"></script>
+    <script type="application/json" id="ua-language" src="./locales/ua.json"></script>
 </head>
 
 <body>
@@ -60,7 +70,7 @@
 
                     <div class="header__buttons-wrapper">
                         <div class="contact-us contact-us--desktop js-contact-us">
-                            Contact Us
+                            <span data-translate="header.contact-us"></span>
                             <div class="image-wrapper">
                                 <svg width="27" height="26" viewBox="0 0 27 26" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -74,13 +84,13 @@
                             </div>
                         </div>
                         <div class="header__language-switchers">
-                            <span class="header__language-switcher">
+                            <a href="#ua" class="header__language-switcher js-language-swither">
                                 Ua
-                            </span>
+                            </a>
 
-                            <span class="header__language-switcher header__language-switcher--current">
+                            <a href="#en" class="header__language-switcher header__language-switcher--current js-language-swither">
                                 ENG
-                            </span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -90,10 +100,10 @@
                 <div class="container">
                     <div class="hero-section__content-wrapper">
                         <div class="hero-section__content">
-                            <h1 class="hero-section__title">We <span class="hero-section__background">create</span> <br> to get people <br> talking...</h1>
+                            <h1 class="hero-section__title" data-translate="hero-banner.title"></h1>
 
                             <div class="contact-us contact-us--margin-top contact-us--width--small contact-us--mobile js-contact-us">
-                                Contact Us
+                                <span data-translate="hero-banner.contact-us"></span>
                                 <div class="image-wrapper">
                                     <svg width="27" height="26" viewBox="0 0 27 26" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">

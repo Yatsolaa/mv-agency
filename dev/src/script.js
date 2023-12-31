@@ -53,10 +53,73 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 });
 
 function sendEmail() {
-    const recipient = document.getElementById('email').value;
-    const subject = document.getElementById('name').value;
+    let params = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        number: document.getElementById('phone').value,
+    };
 
-    const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}`;
+    const serviceID = "service_9t61o06";
+    const templateID = "template_tfb31ug";
 
-    window.location.href = mailtoLink;
+    emailjs.send(serviceID, templateID, params)
+        .then(res => {
+            document.getElementById('name').value = "",
+                document.getElementById('email').value = "",
+                document.getElementById('phone').value = "",
+
+                document.querySelector('.popup').classList.remove('is-active');
+            document.querySelector('.overlay').classList.remove('is-active');
+            document.querySelector('body').style.overflow = 'auto';
+        })
+        .catch(err => console.log(err));
 }
+
+// language
+
+document.querySelectorAll('.js-language-swither').forEach(item => {
+    item.addEventListener('click', (event) => {
+
+        document.querySelectorAll('.js-language-swither').forEach(switcher => {
+            switcher.classList.remove('header__language-switcher--current');
+        });
+
+        if (window.location.hash) {
+            setTimeout(() => {
+                switchLanguage(window.location.hash.substring(1))
+            }, 10);
+        }
+
+        event.target.classList.add('header__language-switcher--current');
+    })
+})
+
+let currentLanguage = 'en';
+
+function switchLanguage(language) {
+    currentLanguage = language;
+    loadTranslations();
+}
+
+function loadTranslations() {
+    const languageScript = document.getElementById(`${currentLanguage}-language`);
+    fetch(languageScript.src)
+        .then(response => response.json())
+        .then(translations => {
+            const elements = document.querySelectorAll('[data-translate]');
+
+            elements.forEach(element => {
+                const translationKey = element.dataset.translate;
+                const keys = translationKey.split('.');
+
+                let value = translations;
+                keys.forEach(key => {
+                    value = value[key];
+                });
+
+                element.innerHTML = value || '';
+            });
+        });
+}
+
+document.addEventListener('DOMContentLoaded', loadTranslations);

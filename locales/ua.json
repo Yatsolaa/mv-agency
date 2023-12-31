@@ -1,0 +1,9 @@
+{
+    "header":{
+        "contact-us": "Звʼязатись з нами"
+    },
+    "hero-banner":{
+        "contact-us": "Звʼязатись з нами",
+        "title": "Ми <span class='hero-section__background'>створюємо,</span> <br> щоб люди <br> говорили..."
+    }
+}

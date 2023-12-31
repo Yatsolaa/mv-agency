@@ -1,0 +1,9 @@
+{
+    "header":{
+        "contact-us": "Contact Us"
+    },
+    "hero-banner":{
+        "contact-us": "Contact Us",
+        "title": "We <span class='hero-section__background'>create</span> <br> to get people <br> talking..."
+    }
+}
