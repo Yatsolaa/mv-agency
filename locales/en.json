@@ -5,5 +5,48 @@
     "hero-banner":{
         "contact-us": "Contact Us",
         "title": "We <span class='hero-section__background'>create</span> <br> to get people <br> talking..."
+    },
+    "text-with-image":{
+        "subtitle": "ABOUT US",
+        "title": "WE ARE<br>CREATIVE AGENCY",
+        "text": "Our goal is to nurture your vision and provide innovative, custom solutions for all your marketing needs. <br> At Groont Agency, we understand the value of your brand and create to get people talking. We provide a range of customized services including branding, website design & development, photo & video prodaction, marketing consultation, and more.",
+        "contact-us": "Contact Us"
+    },
+    "animated-text":{
+        "text":"\"Your brand our art\""
+    },
+    "services":{
+        "subtitle":"SERVICES",
+        "title":"What we create",
+        "button":"get a free consultation →"
+    },
+    "text-section":{
+        "title": "YOUR <span>benefits</span> of working with our team",
+        "block1-title": "Individual approach",
+        "block1-text": "Our agency is characterized by an individual approach to each client. We don't just create promotional materials; we study your business, your goals and your audience to create unique solutions that accurately reflect your brand and achieve your goals.",
+        "block2-title": "Creativity and quality",
+        "block2-text": "Our team of gifted designers, videographers, and programmers is always ready to bring your ideas to life with the highest quality and creativity. We strive for perfection in every detail.",
+        "block3-title": "A wide range of services",
+        "block3-text": "We offer a full range of services, including creating promotional videos, logos, websites, and design. You can entrust us with all your brand creation and promotion needs.",
+        "block4-title": "Results, not promises",
+        "block4-text": "Our agency is defined by results. We do everything we can to ensure your business grows, increases in turnover and brand awareness.",
+        "block5-title": "Cooperation and support",
+        "block5-text": "We work as your business partner, always ready to help you succeed. Our support doesn't end when the project is completed; we'll be there for you every step of the way."
+    },
+    "newsletter":{
+        "title": "Do you have a Project? Let's Build it <span>Together</span>",
+        "button": "Contact Us"
+    },
+    "popup":{
+        "title-left": "Let’s build the future of Your business together!",
+        "text-left": "We’d love to hear about what you’re looking for. Give us a few details below and our team will be in touch shortly.",
+        "title-right": "Send inquiry",
+        "text-right": "Fill our form and we will get back to you within a few hours.",
+        "name": "Your Name",
+        "email": "Email",
+        "number": "Number",
+        "message": "Tell us smth about your project",
+        "button": "Send an Inquiry",
+        "link": "Get in touch with us"
     }
 }

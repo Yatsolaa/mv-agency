@@ -57,6 +57,7 @@ function sendEmail() {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
         number: document.getElementById('phone').value,
+        message: document.getElementById('message').value,
     };
 
     const serviceID = "service_9t61o06";
@@ -67,6 +68,7 @@ function sendEmail() {
             document.getElementById('name').value = "",
                 document.getElementById('email').value = "",
                 document.getElementById('phone').value = "",
+                document.getElementById('message').value = "",
 
                 document.querySelector('.popup').classList.remove('is-active');
             document.querySelector('.overlay').classList.remove('is-active');
@@ -115,7 +117,12 @@ function loadTranslations() {
                     value = value[key];
                 });
 
-                element.innerHTML = value || '';
+                console.log("element type", element.tagName);
+                if (element.tagName == "INPUT" || element.tagName == "TEXTAREA") {
+                    element.placeholder = value || '';
+                } else {
+                    element.innerHTML = value || '';
+                }
             });
         });
 }
