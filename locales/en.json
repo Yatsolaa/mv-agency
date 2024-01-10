@@ -18,7 +18,11 @@
     "services":{
         "subtitle":"SERVICES",
         "title":"What we create",
-        "button":"get a free consultation →"
+        "button":"get a free consultation →",
+        "card1_text":"We produce creative videos and photography for advertising, corporate events, conferences, animation, and social media content.",
+        "card2_text":"We provide web design and development services, including unique design, interactive elements, and search engine optimization.",
+        "card3_text":"We provide Graphic Design services, with the best designers.",
+        "card4_text":"We provide services in market research, competitive analysis, strategic brand development, and communication strategies."
     },
     "text-section":{
         "title": "YOUR <span>benefits</span> of working with our team",

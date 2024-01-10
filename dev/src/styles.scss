@@ -74,7 +74,7 @@ main{
     column-gap: 8px;
     width: 100%;
 
-    padding: 15px 40px;
+    padding: 10px 35px;
     border-radius: 8px;
     background: #2459FF;
 
@@ -319,12 +319,11 @@ main{
 
     &__image{
         margin: 30px 0 0;
-        padding: 0 0 0 15px;
+        padding: 0;
         width: 100%;
         
         @media screen and (min-width:768px) {
             margin: 0;
-            padding: 0;
 
             position: absolute;
             width: 50%;
@@ -885,35 +884,44 @@ main{
     bottom: 0;
     left: 0;
     background-color:rgba(0, 0, 0, 0.4);
+    background-color: #000;
+    opacity: 0;
     z-index: 5;
-    display: none;
+    transition: all 0.8s;
+    visibility: hidden;
 
     &.is-active{
-        display: block;
+        visibility: visible;
+        opacity: 0.4;
     }
 }
 
 .popup{
+    display: flex;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 95%;
     max-width: 1200px;
+    translate: 0 10px;
     z-index: 6;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s;
 
+    @media screen and (min-width:768px) {
+        width: 100%;
+    }    
+    
     textarea {
         resize: none;
     }
 
-    @media screen and (min-width:768px) {
-        width: 100%;
-    }
-
-    display: none;
-
     &.is-active{
-        display: flex;
+        visibility: visible;
+        translate: 0 0;
+        opacity: 1
     }
 
     &__left{
