@@ -1,5 +1,6 @@
 window.onload = () => {
-    document.querySelector('.preloader').classList.add('preloader--disabled')
+    document.body.style.overflow = 'auto';
+    document.querySelector('.preloader').classList.add('preloader--disabled');
 }
 
 // if section is in viewport
