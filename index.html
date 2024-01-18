@@ -15,12 +15,18 @@
     })();
     </script>
 
+    <script src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script>
     <!-- Include the language scripts -->
     <script type="application/json" id="en-language" src="./locales/en.json"></script>
     <script type="application/json" id="ua-language" src="./locales/ua.json"></script>
 </head>
 
 <body>
+    
+    <div class="preloader">
+        <dotlottie-player src="./assets/preloader.lottie" speed="1" style="width: 320px; height: 320px" direction="1" mode="normal" loop autoplay></dotlottie-player>
+    </div>
+
     <div class="overlay"></div>
     <div class="popup">
         <div class="popup__left">

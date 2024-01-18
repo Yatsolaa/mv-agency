@@ -1,3 +1,7 @@
+window.onload = () => {
+    document.querySelector('.preloader').classList.add('preloader--disabled')
+}
+
 // if section is in viewport
 
 function isSectionInViewport(section) {
