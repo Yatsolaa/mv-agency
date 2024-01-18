@@ -127,6 +127,28 @@ main{
     }
 }
 
+@keyframes stretchy {
+    0% {
+        transform: translateX(0);
+        width: 33px;
+    }
+    100% {
+        transform: translateX(40px);
+        width: 42px;
+    }
+  }
+  
+  @keyframes stretchyRev {
+    0% {
+        transform: translateX(40px);
+        width: 42px;
+    }
+    100% {
+        transform: translateX(0);
+        width: 33px;
+    }
+  }
+
 .header{
     padding: 35px 0;
 
@@ -145,6 +167,15 @@ main{
     &__language-switchers{
         display: flex;
         column-gap: 7px;
+        position: relative;
+    }
+
+    #language-ua.header__language-switcher--current ~ &__language-switchers-background{
+        animation-name: stretchyRev;
+    }
+
+    #language-en.header__language-switcher--current ~ &__language-switchers-background{
+        animation-name: stretchy;
     }
 
     &__language-switcher{
@@ -153,7 +184,6 @@ main{
         justify-content: center;
         align-items: center;
 
-        border-radius: 8px;
         background-color: transparent;
 
         color: #FFF;
@@ -166,13 +196,31 @@ main{
         text-transform: uppercase;
         text-decoration: none;
         cursor: pointer;
+        transition: transform 0.2s;
+
+        z-index: 2;
+
+        &:hover{
+            transform: scale(1.15);
+        }
 
         &--current{
-            background-color: #FFF;
-
             color: #000;
             font-weight: 500;
         }
+    }
+
+    &__language-switchers-background{
+        position: absolute;
+        height: 28px;
+        width: 42px;
+        background-color: #FFF;
+        border-radius: 8px;
+        animation-duration: .5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        transition:
+          transform 150ms ease
     }
 }
 
@@ -236,6 +284,11 @@ main{
         right: 15px;
         bottom: 30%;
         cursor: pointer;
+        transition: all 0.4s;
+
+        &:hover{
+            transform: translateY(15px);
+        }
 
         @media screen and (min-width:768px) {
             right: 100px;
@@ -525,6 +578,7 @@ main{
         position: relative;
 
         & > .image-wrapper{
+            overflow: hidden;
             filter: blur(2px);
 
             @media screen and (min-width:992px) {
@@ -533,10 +587,17 @@ main{
             }
         }
 
+        & img{
+            transition: all 0.4s;
+        }
+
         @media screen and (min-width:992px) {
+            &:hover img{
+                transform: scale(1.1);
+            }
+
             &:hover > .image-wrapper{
                 filter: blur(5px);
-                margin: -10px;
             }
 
             & > .services__card-content-wrapper{

@@ -26,11 +26,11 @@ window.addEventListener('scroll', function () {
 
     if (isSectionInViewport(animatedSection)) {
         if (window.screen.width > 768) {
-            relativeScroll = (scrollPosition - sectionTop) + 300;
-            reverseRelativeScroll = -(scrollPosition - sectionTop) - 300;
+            relativeScroll = ((scrollPosition - sectionTop) / 1.5) + 300;
+            reverseRelativeScroll = -((scrollPosition - sectionTop) / 1.5) - 300;
         } else {
-            relativeScroll = (scrollPosition - sectionTop) + 900;
-            reverseRelativeScroll = -(scrollPosition - sectionTop) - 900;
+            relativeScroll = ((scrollPosition - sectionTop) / 1.5) + 900;
+            reverseRelativeScroll = -((scrollPosition - sectionTop) / 1.5) - 900;
         }
 
         animatedTextLeft.style.transform = 'translateX(' + reverseRelativeScroll + 'px)';
