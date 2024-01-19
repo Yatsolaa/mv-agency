@@ -8,12 +8,12 @@
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="assets/fonts.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
     (function(){
         emailjs.init("SbHPQBb_ahBcc2og0");
     })();
-    </script>
+    </script> -->
 
     <script src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script>
     <!-- Include the language scripts -->
@@ -41,7 +41,7 @@
             <p data-translate="popup.text-right"></p>
 
             <div class="popup__form-wrapper">
-                <form action="#" method="post" id="contactForm" class="popup__form">
+                <form action="mail.php" method="POST" id="contactForm" class="popup__form">
                     <input class="popup__form-input" type="text" id="name" name="name" required data-translate="popup.name">
         
                     <input class="popup__form-input" type="email" id="email" name="email" required data-translate="popup.email">
