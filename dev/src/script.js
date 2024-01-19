@@ -127,7 +127,6 @@ function loadTranslations() {
                     value = value[key];
                 });
 
-                console.log("element type", element.tagName);
                 if (element.tagName == "INPUT" || element.tagName == "TEXTAREA") {
                     element.placeholder = value || '';
                 } else {
