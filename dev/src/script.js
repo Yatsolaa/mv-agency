@@ -137,3 +137,20 @@ function loadTranslations() {
 }
 
 document.addEventListener('DOMContentLoaded', loadTranslations);
+
+// text animation
+
+function reveal() {
+    document.querySelectorAll(".js-animation").forEach(item => {
+        var windowHeight = window.innerHeight;
+        var elementTop = item.getBoundingClientRect().top;
+        var elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+            item.classList.add("active");
+        } else {
+            item.classList.remove("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", reveal);
