@@ -75,7 +75,7 @@ body{
 .container{
     width: 100%;
     max-width: 1300px;
-    padding: 0 15px;
+    padding: 0 25px;
     margin: 0 auto;
     position: relative;
 
@@ -175,6 +175,52 @@ body{
         width: 33px;
     }
   }
+
+.animation-primary{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 0.3s transform ease, 0.3s filter, 0.3s opacity ease;
+    filter: blur(8px);
+    transition-delay: 0s, 0.5s;
+
+    &.active{
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0px);
+    }
+
+    &--absolute{
+        transform: translate(-50%, calc(50% + 150px)) !important;
+
+        &.active{
+            transform: translate(-50%, 0) !important;
+        }
+    }
+}
+
+.animation-secondary{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 0.3s transform ease, 0.3s filter, 0.3s opacity ease;
+    filter: blur(8px);
+    transition-delay: 0.5s, 1s;
+
+    &.active{
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0px);
+    }
+
+    &--absolute{
+        transform: translateY(calc(-50% + 150px)) !important;
+
+        &.active{
+            transform: translateY(-50%) !important;
+        }
+    }
+}
 
 .header{
     padding: 35px 0;
@@ -387,19 +433,6 @@ body{
 
     &__content-wrapper{
         max-width: 530px;
-
-        position: relative;
-        transform: translateY(150px);
-        opacity: 0;
-        transition: 0.5s transform ease, 0.5s filter, 0.5s opacity ease;
-        filter: blur(8px);
-        transition-delay: 0s, 0.5s;
-
-        &.active{
-            transform: translateY(0);
-            opacity: 1;
-            filter: blur(0px);
-        }
 
         @media screen and (min-width:768px) and (max-width:1400px) {
             max-width: 47%;

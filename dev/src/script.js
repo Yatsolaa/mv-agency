@@ -144,7 +144,7 @@ function reveal() {
     document.querySelectorAll(".js-animation").forEach(item => {
         var windowHeight = window.innerHeight;
         var elementTop = item.getBoundingClientRect().top;
-        var elementVisible = 150;
+        var elementVisible = 100;
         if (elementTop < windowHeight - elementVisible) {
             item.classList.add("active");
         } else {
