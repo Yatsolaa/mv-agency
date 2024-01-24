@@ -180,7 +180,7 @@ body{
     position: relative;
     transform: translateY(150px);
     opacity: 0;
-    transition: 0.2s transform ease, 0.2s filter, 0.2s opacity ease;
+    transition: 0.3s transform ease, 0.2s filter, 0.3s opacity ease;
     filter: blur(8px);
     transition-delay: 0s, 0.2s;
 
@@ -203,9 +203,9 @@ body{
     position: relative;
     transform: translateY(150px);
     opacity: 0;
-    transition: 0.2s transform ease, 0.2s filter, 0.2s opacity ease;
+    transition: 0.3s transform ease, 0.2s filter, 0.3s opacity ease;
     filter: blur(8px);
-    transition-delay: 0.2s, 0.3s;
+    transition-delay: 0.2s, 0.4s;
 
     &.active{
         transform: translateY(0);
