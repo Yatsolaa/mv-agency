@@ -469,6 +469,7 @@ body{
         }
 
         & > video{
+            pointer-events: none;
             display: block;
             width: 100%;
             height: auto;
