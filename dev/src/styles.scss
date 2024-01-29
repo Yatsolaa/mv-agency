@@ -58,6 +58,7 @@ body{
         height: 100%;
         width: 100%;
         object-fit: cover;
+        pointer-events: none;
     }
 }
 
@@ -214,10 +215,13 @@ body{
     }
 
     &--absolute{
-        transform: translateY(calc(-50% + 150px)) !important;
 
-        &.active{
-            transform: translateY(-50%) !important;
+        @media screen and (min-width: 768px) {
+            transform: translateY(calc(-50% + 150px)) !important;
+
+            &.active{
+                transform: translateY(-50%) !important;
+            }
         }
     }
 }
@@ -458,7 +462,7 @@ body{
             transform: translateY(-50%);
         }
 
-        & > img{
+        & > video{
             display: block;
             width: 100%;
             height: auto;
@@ -1032,7 +1036,6 @@ body{
 }
 
 .popup{
-    display: flex;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -1048,6 +1051,21 @@ body{
     @media screen and (min-width:768px) {
         width: 100%;
     }    
+
+    &__inner{
+        display: flex;
+    }
+
+    &__close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-family: $primary-font;
+        font-size: 25px;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+    }
     
     textarea {
         resize: none;

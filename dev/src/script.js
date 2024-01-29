@@ -51,43 +51,13 @@ document.querySelectorAll('.js-contact-us').forEach(item => {
     })
 })
 
-document.querySelector('.overlay').addEventListener('click', () => {
-    document.querySelector('.popup').classList.remove('is-active');
-    document.querySelector('.overlay').classList.remove('is-active');
-    document.querySelector('body').style.overflow = 'auto';
-});
-
-// document.getElementById('contactForm').addEventListener('submit', function (event) {
-//     event.preventDefault();
-//     sendEmail();
-// });
-
-// function sendEmail() {
-//     let params = {
-//         name: document.getElementById('name').value,
-//         email: document.getElementById('email').value,
-//         number: document.getElementById('phone').value,
-//         message: document.getElementById('message').value,
-//     };
-
-//     const serviceID = "service_9t61o06";
-//     const templateID = "template_tfb31ug";
-
-//     emailjs.send(serviceID, templateID, params)
-//         .then(res => {
-//             document.getElementById('name').value = "",
-//                 document.getElementById('email').value = "",
-//                 document.getElementById('phone').value = "",
-//                 document.getElementById('message').value = "",
-
-//                 document.querySelector('.popup').classList.remove('is-active');
-//             document.querySelector('.overlay').classList.remove('is-active');
-//             document.querySelector('body').style.overflow = 'auto';
-//         })
-//         .catch(err => console.log(err));
-// }
-
-// language
+document.querySelectorAll('.js-close-popup').forEach(item => {
+    item.addEventListener('click', () => {
+        document.querySelector('.popup').classList.remove('is-active');
+        document.querySelector('.overlay').classList.remove('is-active');
+        document.querySelector('body').style.overflow = 'auto';
+    });
+})
 
 document.querySelectorAll('.js-language-swither').forEach(item => {
     item.addEventListener('click', (event) => {
