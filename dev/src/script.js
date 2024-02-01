@@ -67,7 +67,7 @@ document.querySelectorAll('.js-language-swither').forEach(item => {
         });
 
         setTimeout(() => {
-            switchLanguage(window.location.hash.substring(1));
+            switchLanguage(event.target.dataset.language);
         }, 10);
 
         event.target.classList.add('header__language-switcher--current');
